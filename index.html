@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Project Task Manager</h1>
+            <p>Organize your work, one task at a time.</p>
+        </header>
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Remaining</h3>
+                <p id="remainingTasks">0</p>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <div class="progress-label">
+                <span>Project Progress</span>
+                <span id="progressText">0%</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+        </section>
+
+        <section class="task-form-section">
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+                <label for="taskInput">Task Name</label>
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter your task..."
+                    maxlength="150"
+                    required
+                >
+
+                <label for="priorityInput">Priority</label>
+                <select id="priorityInput">
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <section class="task-list-section">
+            <h2>My Tasks</h2>
+
+            <div id="taskList">
+                <p class="empty-message">No tasks yet. Add your first task!</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
